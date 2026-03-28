@@ -1,0 +1,113 @@
+:root {
+    --bg: #000000;
+    --fg: #FAFAFA;
+    --accent: #14b8a6;
+    --spacing-unit: 8px;
+    --section-padding: 160px;
+    --container-max: 1200px;
+    --font-heading: 'Inter Tight', system-ui, -apple-system, sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0 !important;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    font-weight: 800;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:hover { opacity: 1; }
+
+.mono {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 11px;
+    opacity: 1;
+}
+
+/* Layout */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+section {
+    padding: var(--section-padding) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    :root { --section-padding: 80px; }
+    .container { padding: 0 24px; }
+}
+
+/* Signature Mark */
+.hidden {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    width: 32px;
+    height: 32px;
+}
+.hidden { width: 14px; height: 14px; background: #FFF; }
+.hidden.accent { background: var(--accent); }
+
+/* Components */
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--bg);
+    padding: 24px 48px;
+    font-weight: 800;
+    font-size: 18px;
+    font-family: var(--font-heading);
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+}
+
+.value-box {
+    border-left: 4px solid var(--accent);
+    padding: 20px 30px;
+    background: rgba(20, 184, 166, 0.05);
+    margin: 20px 0;
+}
+
+/* Animations */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.25, 0, 0, 1); }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Utilities */
+.text-accent { color: var(--accent); }
+.opacity-7 { opacity: 1; }
+.mt-40 { margin-top: 40px; }
+.mb-40 { margin-bottom: 40px; }

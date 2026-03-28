@@ -1,0 +1,73 @@
+:root {
+    --bg: #000000;
+    --accent: #14b8a6;
+    --text: #ffffff;
+    --font-heading: 'Inter Tight', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: crosshair;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.mono { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
+.text-accent { color: var(--accent); }
+
+.btn-primary {
+    display: inline-block;
+    padding: 20px 40px;
+    background: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+.card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 40px;
+    border-radius: 0px;
+}
+
+.vsl-frame {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #111;
+    border: 1px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.vsl-frame::after {
+    content: '[ INCOMING_TRANSMISSION ]';
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-size: 10px;
+}
+
+section { padding: 120px 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }

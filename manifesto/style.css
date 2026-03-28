@@ -1,0 +1,62 @@
+:root {
+    --bg: #000000;
+    --accent: #14b8a6;
+    --text: #ffffff;
+    --font-heading: 'Inter Tight', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: crosshair;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.mono { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
+.text-accent { color: var(--accent); }
+
+.btn-primary {
+    display: inline-block;
+    padding: 20px 40px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.pill-card {
+    background: rgba(255,255,255,0.02);
+    border-left: 1px solid var(--accent);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+section { padding: 120px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+.container { max-width: 900px; margin: 0 auto; padding: 0 40px; }
+
+h1, h2, h3 { font-family: var(--font-heading); line-height: 1.1; margin-bottom: 30px; }
+h1 { font-size: 80px; }
+h2 { font-size: 48px; }
+
+.thesis-text { font-size: 18px; opacity: 1; line-height: 1.8; margin-bottom: 40px; }
+b { color: white; }
